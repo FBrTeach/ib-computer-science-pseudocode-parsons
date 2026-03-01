@@ -94,6 +94,8 @@ For example, the `FLAGS` array for the `MAT` array shown in **Figure 3a** is:
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 
+</div>
+
 And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
 
 <div style="overflow-x: auto;" markdown="1">
@@ -104,13 +106,18 @@ And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
 
 </div>
 
-<div id="q13c-sortableTrash" class="sortable-code"></div> 
-<div id="q13c-sortable" class="sortable-code"></div> 
+<br>
+
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+    <div id="q13c-sortableTrash" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
+    <div id="q13c-sortable" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
+</div>
 <div style="clear:both;"></div> 
 <p> 
     <input id="q13c-feedbackLink" value="Get Feedback" type="button" /> 
     <input id="q13c-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
+
 <script type="text/javascript"> 
 (function(){
   var initial = "isCorrectlyCompleted(MAT)\n" +
