@@ -38,7 +38,7 @@ In the program, the table is stored as a static two-dimensional array.
 
 <div style="display: flex; gap: 40px; flex-wrap: wrap;">
 
-<div style="flex: 1; min-width: 300px;">
+<div style="flex: 1; min-width: 300px;" markdown="1">
 
 **Figure 3a:** The two-dimensional array is correctly completed because each of the numbers from 1 to 25 appears only once.
 
@@ -52,7 +52,7 @@ In the program, the table is stored as a static two-dimensional array.
 
 </div>
 
-<div style="flex: 1; min-width: 300px;">
+<div style="flex: 1; min-width: 300px;" markdown="1">
 
 **Figure 3b:** The two-dimensional array is not correctly completed because the number 17 is missing and the number 12 appears twice.
 
