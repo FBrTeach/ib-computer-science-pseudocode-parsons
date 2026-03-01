@@ -107,6 +107,7 @@ And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
 </div>
 
 <br>
+Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-program as described.
 
 <div style="display: flex; justify-content: space-between; gap: 20px;">
     <div id="q13c-sortableTrash" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
