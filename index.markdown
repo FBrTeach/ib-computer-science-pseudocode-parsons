@@ -5,6 +5,18 @@
 layout: default
 title: Multiple Parson's Problems on One Page
 ---
+<style>
+  table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid black !important;
+    padding: 8px;
+    text-align: center;
+  }
+</style>
+
 # 2025 May Question 13c
 A team of four high-school students decided to create a computer program for younger students to help them learn to count and recognize whole numbers from 1 to 25.
 
