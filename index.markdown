@@ -118,65 +118,50 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     <input id="2025_May_Qu13c-feedbackLink" value="Get Feedback" type="button" /> 
     <input id="2025_May_Qu13c-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+    <div id="2025_May_Qu13c-sortableTrash" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
+    <div id="2025_May_Qu13c-sortable" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
+</div>
+<div style="clear:both;"></div> 
+<p> 
+    <input id="2025_May_Qu13c-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="2025_May_Qu13c-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+
 <script type="text/javascript"> 
 (function(){
-  var initial = "isCorrectlyCompleted(MAT)
-\n" +
-    "    // Initializing the FLAGS array
-\n" +
-    "    loop K from 0 to 24
-\n" +
-    "        FLAGS[K] = 0
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    // Mapping MAT values to FLAGS indices
-\n" +
-    "    loop R from 0 to 4
-\n" +
-    "        loop C from 0 to 4
-\n" +
-    "            INDEX = MAT[R][C] - 1
-\n" +
-    "            FLAGS[INDEX] = 1
-\n" +
-    "        end loop
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    // Inspecting the FLAGS array
-\n" +
-    "    F = true
-\n" +
-    "    loop K from 0 to 24
-\n" +
-    "        if FLAGS[K] = 0 then
-\n" +
-    "            F = false
-\n" +
-    "        end if
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    if F then
-\n" +
-    "        output(&#039;the table has been correctly completed&#039;)
-\n" +
-    "    else
-\n" +
-    "        output(&#039;the table has not been correctly completed&#039;)
-\n" +
-    "    end if
-\n" +
+  var initial = "isCorrectlyCompleted(MAT)\n" +
+    "    // Initializing the FLAGS array\n" +
+    "    loop K from 0 to 24 //1st time\n" +
+    "        FLAGS[K] = 0\n" +
+    "    end loop 1\n" + 
+    "\n" +
+    "    // Mapping MAT values to FLAGS indices\n" +
+    "    loop R from 0 to 4\n" +
+    "        loop C from 0 to 4\n" +
+    "            INDEX = MAT[R][C] - 1\n" +
+    "            FLAGS[INDEX] = 1\n" +
+    "        end loop 2\n" +
+    "    end loop 3\n" +
+    "\n" +
+    "    // Inspecting the FLAGS array\n" +
+    "    F = true\n" +
+    "    loop K from 0 to 24 //2nd time\n" +
+    "        if FLAGS[K] = 0 then\n" +
+    "            F = false\n" +
+    "        end if 1\n" +
+    "    end loop 4\n" +
+    "\n" +
+    "    if F then\n" +
+    "        output('the table has been correctly completed')\n" +
+    "    else\n" +
+    "        output('the table has not been correctly completed')\n" +
+    "    end if 2\n" +
     "end isCorrectlyCompleted";
+
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "2025_May_Qu13c-sortable",
+    "trashId": "2025_May_Qu13c-sortableTrash", // Re-added the missing drag-from-here box
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -184,10 +169,12 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "python3": true
+    "python3": false // Set to false to prevent pseudocode errors
   });
+
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
+  
   $("#2025_May_Qu13c-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
