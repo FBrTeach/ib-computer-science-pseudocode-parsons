@@ -7,72 +7,47 @@ title: Multiple Parson's Problems on One Page
 ---
 # 2025 May Question 13c
 
-<div id="2025_May_Qu13c-sortableTrash" class="sortable-code"></div> 
-<div id="2025_May_Qu13c-sortable" class="sortable-code"></div> 
+<div id="q13c-sortableTrash" class="sortable-code"></div> 
+<div id="q13c-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="2025_May_Qu13c-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="2025_May_Qu13c-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="q13c-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="q13c-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "isCorrectlyCompleted(MAT)
-\n" +
-    "    // Initializing the FLAGS array
-\n" +
-    "    loop K from 0 to 24
-\n" +
-    "        FLAGS[K] = 0
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    // Mapping MAT values to FLAGS indices
-\n" +
-    "    loop R from 0 to 4
-\n" +
-    "        loop C from 0 to 4
-\n" +
-    "            INDEX = MAT[R][C] - 1
-\n" +
-    "            FLAGS[INDEX] = 1
-\n" +
-    "        end loop
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    // Inspecting the FLAGS array
-\n" +
-    "    F = true
-\n" +
-    "    loop K from 0 to 24
-\n" +
-    "        if FLAGS[K] = 0 then
-\n" +
-    "            F = false
-\n" +
-    "        end if
-\n" +
-    "    end loop
-\n" +
-    "
-\n" +
-    "    if F then
-\n" +
-    "        output(&#039;the table has been correctly completed&#039;)
-\n" +
-    "    else
-\n" +
-    "        output(&#039;the table has not been correctly completed&#039;)
-\n" +
-    "    end if
-\n" +
+  var initial = "isCorrectlyCompleted(MAT)\n" +
+    "    // Initializing the FLAGS array\n" +
+    "    loop K from 0 to 24\n" +
+    "        FLAGS[K] = 0\n" +
+    "    end loop\n" +
+    "\n" +
+    "    // Mapping MAT values to FLAGS indices\n" +
+    "    loop R from 0 to 4\n" +
+    "        loop C from 0 to 4\n" +
+    "            INDEX = MAT[R][C] - 1\n" +
+    "            FLAGS[INDEX] = 1\n" +
+    "        end loop\n" +
+    "    end loop\n" +
+    "\n" +
+    "    // Inspecting the FLAGS array\n" +
+    "    F = true\n" +
+    "    loop K from 0 to 24\n" +
+    "        if FLAGS[K] = 0 then\n" +
+    "            F = false\n" +
+    "        end if\n" +
+    "    end loop\n" +
+    "\n" +
+    "    if F then\n" +
+    "        output('the table has been correctly completed')\n" +
+    "    else\n" +
+    "        output('the table has not been correctly completed')\n" +
+    "    end if\n" +
     "end isCorrectlyCompleted";
+
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "2025_May_Qu13c-sortable",
+    "sortableId": "q13c-sortable",
+    "trashId": "q13c-sortableTrash",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -82,13 +57,15 @@ title: Multiple Parson's Problems on One Page
     "show_feedback": true,
     "python3": true
   });
+  
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#2025_May_Qu13c-newInstanceLink").click(function(event){ 
+  
+  $("#q13c-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#2025_May_Qu13c-feedbackLink").click(function(event){ 
+  $("#q13c-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
