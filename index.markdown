@@ -110,23 +110,16 @@ And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
 
 <br>
 Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-program as described.
-
-<div id="2025_May_Qu13c-sortableTrash" class="sortable-code"></div> 
-<div id="2025_May_Qu13c-sortable" class="sortable-code"></div> 
-<div style="clear:both;"></div> 
-<p> 
-    <input id="2025_May_Qu13c-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="2025_May_Qu13c-newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
 <div style="display: flex; justify-content: space-between; gap: 20px;">
     <div id="2025_May_Qu13c-sortableTrash" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
     <div id="2025_May_Qu13c-sortable" class="sortable-code" style="flex: 1; width: auto; float: none; margin: 0;"></div> 
 </div>
 <div style="clear:both;"></div> 
-<p> 
+
+<div style="display: flex; gap: 10px; margin-top: 15px;"> 
     <input id="2025_May_Qu13c-feedbackLink" value="Get Feedback" type="button" /> 
     <input id="2025_May_Qu13c-newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
+</div> 
 
 <script type="text/javascript"> 
 (function(){
@@ -161,7 +154,7 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
 
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "2025_May_Qu13c-sortable",
-    "trashId": "2025_May_Qu13c-sortableTrash", // Re-added the missing drag-from-here box
+    "trashId": "2025_May_Qu13c-sortableTrash", 
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -169,7 +162,7 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "python3": false // Set to false to prevent pseudocode errors
+    "python3": false 
   });
 
   parsonsPuzzle.init(initial);
