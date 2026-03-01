@@ -68,8 +68,6 @@ In the program, the table is stored as a static two-dimensional array.
 
 </div>
 
-<br>
-
 The sub-program `isCorrectlyCompleted(MAT)` accepts the two-dimensional array `MAT` and outputs an appropriate message to indicate if it has been correctly filled.
 
 For example:
@@ -90,15 +88,22 @@ The description of the algorithm for the `isCorrectlyCompleted(MAT)` sub-program
 
 For example, the `FLAGS` array for the `MAT` array shown in **Figure 3a** is:
 
+<div style="overflow-x: auto;" markdown="1">
+
 | [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12] | [13] | [14] | [15] | [16] | [17] | [18] | [19] | [20] | [21] | [22] | [23] | [24] |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 
 And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
 
+<div style="overflow-x: auto;" markdown="1">
+
 | [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12] | [13] | [14] | [15] | [16] | [17] | [18] | [19] | [20] | [21] | [22] | [23] | [24] |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | **0** | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+</div>
+
 <div id="q13c-sortableTrash" class="sortable-code"></div> 
 <div id="q13c-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
