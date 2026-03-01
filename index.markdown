@@ -61,11 +61,11 @@ title: Multiple Parson's Problems on One Page
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
   
-  $("#q13c-newInstanceLink").click(function(event){ 
+  jQuery("#q13c-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#q13c-feedbackLink").click(function(event){ 
+  jQuery("#q13c-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
