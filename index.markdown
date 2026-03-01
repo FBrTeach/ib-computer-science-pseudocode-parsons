@@ -15,8 +15,16 @@ title: Multiple Parson's Problems on One Page
     padding: 8px;
     text-align: center;
   }
-  .correctPosition { background-color: #dff0d8 !important; border-color: #d6e9c6 !important; }
-  .incorrectPosition { background-color: #f2dede !important; border-color: #eed3d7 !important; }
+  .js-parsons .correctPosition { 
+      background-color: #dff0d8 !important; 
+      border-color: #d6e9c6 !important; 
+      color: #3c763d !important;
+  }
+  .js-parsons .incorrectPosition { 
+      background-color: #f2dede !important; 
+      border-color: #eed3d7 !important; 
+      color: #a94442 !important;
+  }
 </style>
 
 # 2025 May Question 13c
