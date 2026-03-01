@@ -15,6 +15,8 @@ title: Multiple Parson's Problems on One Page
     padding: 8px;
     text-align: center;
   }
+  .correctPosition { background-color: #dff0d8 !important; border-color: #d6e9c6 !important; }
+  .incorrectPosition { background-color: #f2dede !important; border-color: #eed3d7 !important; }
 </style>
 
 # 2025 May Question 13c
@@ -125,15 +127,15 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     "    // Initializing the FLAGS array\n" +
     "    loop K from 0 to 24\n" +
     "        FLAGS[K] = 0\n" +
-    "    end loop\n" +
+    "    end loop // 1\n" +
     "\n" +
     "    // Mapping MAT values to FLAGS indices\n" +
     "    loop R from 0 to 4\n" +
     "        loop C from 0 to 4\n" +
     "            INDEX = MAT[R][C] - 1\n" +
     "            FLAGS[INDEX] = 1\n" +
-    "        end loop\n" +
-    "    end loop\n" +
+    "        end loop // 2\n" +
+    "    end loop // 3\n" +
     "\n" +
     "    // Inspecting the FLAGS array\n" +
     "    F = true\n" +
@@ -141,7 +143,7 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     "        if FLAGS[K] = 0 then\n" +
     "            F = false\n" +
     "        end if\n" +
-    "    end loop\n" +
+    "    end loop // 4\n" +
     "\n" +
     "    if F then\n" +
     "        output('the table has been correctly completed')\n" +
