@@ -6,7 +6,79 @@ layout: default
 title: Multiple Parson's Problems on One Page
 ---
 # 2025 May Question 13c
+A team of four high-school students decided to create a computer program for younger students to help them learn to count and recognize whole numbers from 1 to 25.
 
+A table partially completed with numbers from 1 to 25 is given to a younger student. The table consists of five rows and five columns (see **Figure 2**). The younger student must enter the remaining numbers. Each number from 1 to 25 should be entered only once.
+
+**Figure 2: Example table partially filled with numbers**
+
+| | | | | |
+| :---: | :---: | :---: | :---: | :---: |
+| | 24 | 1 | | |
+| | | 7 | 14 | |
+| 4 | 6 | | | 22 |
+| 10 | | | 21 | 3 |
+| 11 | | 25 | | 9 |
+
+<br>
+
+In the program, the table is stored as a static two-dimensional array.
+
+**Figure 3: Two examples of data**
+
+**Figure 3a:** The two-dimensional array is correctly completed because each of the numbers from 1 to 25 appears only once.
+
+| | [0] | [1] | [2] | [3] | [4] |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **[0]** | 2 | 24 | 1 | 8 | 15 |
+| **[1]** | 23 | 5 | 7 | 14 | 16 |
+| **[2]** | 4 | 6 | 13 | 20 | 22 |
+| **[3]** | 10 | 12 | 19 | 21 | 3 |
+| **[4]** | 11 | 18 | 25 | 17 | 9 |
+
+<br>
+
+**Figure 3b:** The two-dimensional array is not correctly completed because the number 17 is missing and the number 12 appears twice.
+
+| | [0] | [1] | [2] | [3] | [4] |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **[0]** | **12** | 24 | 1 | 8 | 15 |
+| **[1]** | 23 | 5 | 7 | 14 | 16 |
+| **[2]** | 4 | 6 | 13 | 20 | 22 |
+| **[3]** | 10 | **12** | 19 | 21 | 3 |
+| **[4]** | 11 | 18 | 25 | 2 | 9 |
+
+<br>
+
+The sub-program `isCorrectlyCompleted(MAT)` accepts the two-dimensional array `MAT` and outputs an appropriate message to indicate if it has been correctly filled.
+
+For example:
+
+If `MAT` is the two-dimensional array shown in **Figure 3a**, then `isCorrectlyCompleted(MAT)` should output that the table has been correctly completed.
+
+If `MAT` is the two-dimensional array shown in **Figure 3b** then `isCorrectlyCompleted(MAT)` should output that the table has **not** been correctly completed.
+
+---
+
+The description of the algorithm for the `isCorrectlyCompleted(MAT)` sub-program is as follows:
+* Initialize a one-dimensional array, `FLAGS`, with zero (0) values.
+* Visit all elements of the `MAT` array.
+    * Use the number stored in the `MAT` array to match up the index in the `FLAGS` array.
+    * Assign one (1) to the `FLAGS` array at that index.
+* Inspect elements of the `FLAGS` array.
+    * If all the elements in the `FLAGS` array are one (1), output a message saying that the table has been completed correctly; otherwise, output a message saying that the table has not been completed correctly.
+
+For example, the `FLAGS` array for the `MAT` array shown in **Figure 3a** is:
+
+| [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12] | [13] | [14] | [15] | [16] | [17] | [18] | [19] | [20] | [21] | [22] | [23] | [24] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+And the `FLAGS` array for the `MAT` array shown in **Figure 3b** is:
+
+| [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12] | [13] | [14] | [15] | [16] | [17] | [18] | [19] | [20] | [21] | [22] | [23] | [24] |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | **0** | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 <div id="q13c-sortableTrash" class="sortable-code"></div> 
 <div id="q13c-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
