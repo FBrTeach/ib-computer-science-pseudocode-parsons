@@ -127,29 +127,29 @@ Construct the algorithm in pseudocode for the isCorrectlyCompleted(MAT) sub-prog
     "    // Initializing the FLAGS array\n" +
     "    loop K from 0 to 24 //1st time\n" +
     "        FLAGS[K] = 0\n" +
-    "    end loop 1\n" + 
+    "    end loop //1\n" + 
     "\n" +
     "    // Mapping MAT values to FLAGS indices\n" +
     "    loop R from 0 to 4\n" +
     "        loop C from 0 to 4\n" +
     "            INDEX = MAT[R][C] - 1\n" +
     "            FLAGS[INDEX] = 1\n" +
-    "        end loop 2\n" +
-    "    end loop 3\n" +
+    "        end loop //2\n" +
+    "    end loop //3\n" +
     "\n" +
     "    // Inspecting the FLAGS array\n" +
     "    F = true\n" +
     "    loop K from 0 to 24 //2nd time\n" +
     "        if FLAGS[K] = 0 then\n" +
     "            F = false\n" +
-    "        end if 1\n" +
-    "    end loop 4\n" +
+    "        end if //1\n" +
+    "    end loop //4\n" +
     "\n" +
     "    if F then\n" +
     "        output('the table has been correctly completed')\n" +
     "    else\n" +
     "        output('the table has not been correctly completed')\n" +
-    "    end if 2\n" +
+    "    end if //2\n" +
     "end isCorrectlyCompleted";
 
   var parsonsPuzzle = new ParsonsWidget({
