@@ -32,11 +32,13 @@ A table partially completed with numbers from 1 to 25 is given to a younger stud
 | 10 | | | 21 | 3 |
 | 11 | | 25 | | 9 |
 
-<br>
-
 In the program, the table is stored as a static two-dimensional array.
 
 **Figure 3: Two examples of data**
+
+<div style="display: flex; gap: 40px; flex-wrap: wrap;">
+
+<div style="flex: 1; min-width: 300px;">
 
 **Figure 3a:** The two-dimensional array is correctly completed because each of the numbers from 1 to 25 appears only once.
 
@@ -48,7 +50,9 @@ In the program, the table is stored as a static two-dimensional array.
 | **[3]** | 10 | 12 | 19 | 21 | 3 |
 | **[4]** | 11 | 18 | 25 | 17 | 9 |
 
-<br>
+</div>
+
+<div style="flex: 1; min-width: 300px;">
 
 **Figure 3b:** The two-dimensional array is not correctly completed because the number 17 is missing and the number 12 appears twice.
 
@@ -59,6 +63,10 @@ In the program, the table is stored as a static two-dimensional array.
 | **[2]** | 4 | 6 | 13 | 20 | 22 |
 | **[3]** | 10 | **12** | 19 | 21 | 3 |
 | **[4]** | 11 | 18 | 25 | 2 | 9 |
+
+</div>
+
+</div>
 
 <br>
 
